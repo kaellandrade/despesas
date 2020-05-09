@@ -59,8 +59,51 @@ class Bd{
     }
 
     pesquisar(despesa){
-        console.log(despesa)
+        let despesasFiltaradas = Array()
+        despesasFiltaradas = this.recuperarTodosResgistro()
+        console.log(despesa)  //debug
+        console.log(despesasFiltaradas) //debug
+
+        //ano
+        if(despesa.ano != ''){
+            console.log('filtro de ano')
+            despesasFiltaradas = despesasFiltaradas.filter(d => d.ano == despesa.ano)
+        }
+
+        //mes
+        if(despesa.mes != ''){
+            console.log('filtro de mes')
+
+            despesasFiltaradas = despesasFiltaradas.filter(d => d.mes == despesa.mes)
+        }
+        // dia
+        if(despesa.dia != ''){
+            console.log('filtro de dia')
+            despesasFiltaradas = despesasFiltaradas.filter(d => d.dia == despesa.dia)
+        }
+
+        // tipo
+        if(despesa.tipo != ''){
+            console.log('filtro de tipo')
+            despesasFiltaradas = despesasFiltaradas.filter(d => d.tipo == despesa.tipo)
+        }
+
+        // descricao
+        if(despesa.descricao != ''){
+            console.log('filtro de descrição')
+            despesasFiltaradas = despesasFiltaradas.filter(d => d.descricao == despesa.descricao)
+        }
+
+        // valor
+        if(despesa.valor != ''){
+            console.log('filtro de valor')
+            despesasFiltaradas = despesasFiltaradas.filter(d => d.valor == despesa.valor)
+        }
+
+        console.log(despesasFiltaradas) // debug
     }
+    
+
 }
 
 let bd = new Bd()
