@@ -108,7 +108,52 @@ class Bd{
     }
 }
 
+// Class dialog
+
+class MensagemDialogo{
+    constructor(){
+        this.titleModal = document.getElementById('exampleModalLabel')
+        this.mensagem = document.getElementById('mensagem')
+        this.bodyModal = document.getElementById('bodyModal')
+        this.buttonModal = document.getElementById('btModal')
+    }
+    
+    sucessoCadastro(){
+        this.titleModal.innerHTML = 'Registro inserido com sucesso'
+        this.mensagem.innerHTML = 'Sua despesa foi cadastrada com sucesso!'
+        this.buttonModal.innerHTML =  'Voltar'
+        
+        this.bodyModal.className = 'text-success modal-header'
+        this.buttonModal.className = 'btn btn-success'
+        $('#modalDespesa').modal('show')
+    }
+
+    falhaCadastro(){
+        this.titleModal.innerHTML = 'Falha na gravação'
+        this.mensagem.innerHTML = 'Por favor preencha todos os dados para efetuar o cadastro!'
+        this.buttonModal.innerHTML =  'Voltar e corrigir'
+
+
+        this.bodyModal.className = 'text-danger modal-header'
+        this.buttonModal.className = 'btn btn-danger'
+        $('#modalDespesa').modal('show')
+    }
+
+    itemRemovido(){
+        this.titleModal.innerHTML = 'Item removido'
+        this.mensagem.innerHTML = 'Seu item foi removido com sucesso'
+        this.buttonModal.innerHTML =  'Voltar'
+
+
+        this.bodyModal.className = 'text-primary modal-header'
+        this.buttonModal.className = 'btn btn-primary'
+        $('#modalDespesa').modal('show')
+    }
+    
+}
 let bd = new Bd()
+let mensagem = new MensagemDialogo()
+
 
 function cadastrarDespesa(){
     
@@ -129,7 +174,6 @@ function cadastrarDespesa(){
     valor.value
    )
 
-   mensagem = new MensagemDialogo()
    if(despesa.validarDados()){
         bd.gravar(despesa)    
         mensagem.sucessoCadastro()
@@ -151,38 +195,7 @@ function cadastrarDespesa(){
 }
 
 
-// Class dialog
 
-class MensagemDialogo{
-    constructor(){
-        this.titleModal = document.getElementById('exampleModalLabel')
-        this.mensagem = document.getElementById('mensagem')
-        this.bodyModal = document.getElementById('bodyModal')
-        this.buttonModal = document.getElementById('btModal')
-    }
-    
-    sucessoCadastro(){
-        this.titleModal.innerHTML = 'Registro inserido com sucesso'
-        this.mensagem.innerHTML = 'Sua despesa foi cadastrada com sucesso!'
-        this.buttonModal.innerHTML =  'Voltar'
-        
-        this.bodyModal.className = 'text-success modal-header'
-        this.buttonModal.className = 'btn btn-success'
-        $('#modalRegistraDespesa').modal('show')
-    }
-
-    falhaCadastro(){
-        this.titleModal.innerHTML = 'Falha na gravação'
-        this.mensagem.innerHTML = 'Por favor preencha todos os dados para efetuar o cadastro!'
-        this.buttonModal.innerHTML =  'Voltar e corrigir'
-
-
-        this.bodyModal.className = 'text-danger modal-header'
-        this.buttonModal.className = 'btn btn-danger'
-        $('#modalRegistraDespesa').modal('show')
-    }
-    
-}
 
 function carregaListaDespesa(despesas = Array(), filtro = false){
 
@@ -230,13 +243,12 @@ function carregaListaDespesa(despesas = Array(), filtro = false){
         btn.innerHTML = '<i class = "fas fa-times"></i>'
         btn.id =  `id_despesa_${d.id}`
         btn.onclick = function () {
-
+            
             // remover a despesa
             let id = this.id.replace('id_despesa_','')
             bd.remover(id)
-            window.location.reload()
+            mensagem.itemRemovido()            
         }
-
         linha.insertCell(4).append(btn)      
     })
 }
@@ -245,7 +257,7 @@ function pesquisarDespesas(){
     let ano = document.getElementById('ano').value
     let mes = document.getElementById('mes').value
     let dia = document.getElementById('dia').value
-    let tipo =document.getElementById('tipo').value
+    let tipo = document.getElementById('tipo').value
     let descricao = document.getElementById('descricao').value
     let valor = document.getElementById('valor').value
 
