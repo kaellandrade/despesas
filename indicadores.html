@@ -5,7 +5,10 @@
 
 		<!-- Bootstrap início -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilo.css">
+    
+    <!-- Icone e css -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
     
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -19,31 +22,32 @@
 	</head>
 
   <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-           <img src="logo.png" width="50" height="35" alt="Orçamento pessoal">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Cadastro</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="consulta.html">Consulta</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="indicadores.html" >Indicadores</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+             <img src="imagens/logo.svg" width="50" height="35" alt="Orçamento pessoal">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Cadastro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="consulta.html">Consulta</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="indicadores.html" >Indicadores</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     
     <section id="indicadores-body">
       <div class="container">
@@ -54,19 +58,25 @@
         </div>
 
         <div class="row">
-          <div class="col-md-4 text-center">
+          <div class="col-md-6 text-center">
             <h1 class="display-5">Balanço por tags</h1>
             <hr>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <canvas id="myChartTag" width="400" height="400"></canvas>
+          </div>
+
+          <div class="col-md-6 text-center">
+            <h1 class="display-5">Balanço por mes</h1>
+            <hr>
+            <canvas id="myChartMes" width="400" height="400"></canvas>
           </div>
         </div>
         
       </div>
     </section>
+
     <!-- Script -->
-    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="chart.js"></script>
+    <script src="js/chart.js"></script>
   </body>	
 
 </html>

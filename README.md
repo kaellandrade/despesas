@@ -9,3 +9,5 @@ O objetivo dessa aplicação é criar um cadastro dinâmico de despesas categori
 - [Font Awesome](https://fontawesome.com/)
   
 - [MDN Web Docs](https://developer.mozilla.org/pt-BR/)
+  
+- [Chart Js](https://www.chartjs.org/)
