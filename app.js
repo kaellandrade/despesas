@@ -47,7 +47,7 @@ class Bd{
         for(let i = 1; i <= id; i++){ // recupera todas as despesas cadastradas em localStorege
             //Recupera despesa
             let despesa = JSON.parse(localStorage.getItem(String(i)))
-
+            
             //trantando índices removidos
             if(despesa === null){
                 continue
