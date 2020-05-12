@@ -1,7 +1,91 @@
+html,
+body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 /* NAVBAR
 -------------- */
+
 header nav{
     -webkit-box-shadow: 0px 7px 20px -8px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 7px 20px -8px rgba(0,0,0,0.75);
     box-shadow: 0px 7px 20px -8px rgba(0,0,0,0.75);
 }
+section{
+    padding-bottom: 50px;
+}
+
+
+/* Início Titulo
+--------- */
+.title{
+    padding: 10px 0px 10px 0px;
+}
+/* Fim Titulo
+--------- */
+
+/* Início Gráficos 
+------------- */
+.box-grafico{
+    /* border: 2px solid red; */
+    border-radius: 3%;
+    background-color: rgba(223, 223, 223, 0.411);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.301);
+    margin: 40px;
+    padding: 10px;
+}
+.box-grafico h4{
+    margin: 10px 0px 10px 0px;
+    padding-bottom: 5px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.267);
+    display: inline-flex;
+}
+/* Fim Gráficos 
+------------- */
+
+
+
+/* Início Footer
+------------- */
+footer{
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.986);
+    /* border: 1px solid red; */
+}
+
+footer .redes-sociais a{
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+footer .redes-sociais a:hover{
+    color: tomato;
+}
+
+footer .redes-sociais{
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+
+}
+
+footer .namedev{
+    /* border: 1px solid red; */
+    padding: 10px 0px 10px 0px;
+    
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.226);
+    text-decoration: line-through rgba(102, 99, 99, 0.486);
+    text-align: center;
+}
+
+/* Fim Footer
+------------- */

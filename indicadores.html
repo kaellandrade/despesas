@@ -6,19 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Orçamento pessoal</title>
 
-		<!-- Bootstrap início -->
+		<!-- Inicio Estilos  -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    
-    <!-- Icone e css -->
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <!-- Fim Estilos -->
+
     
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- Bootstrap fim -->
-
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     
@@ -56,30 +50,57 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h1 class="display-4">Indicadores</h1>
+            <h1 class="title display-4">Indicadores</h1>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 text-center">
-            <h1 class="display-5">Balanço por tags</h1>
-            <hr>
-            <canvas id="myChartTag" width="400" height="400"></canvas>
+            <div class="box-grafico">
+              <h4 class="display-5">Balanço por tags</h4>
+              <canvas id="myChartTag" width="400" height="400"></canvas>
+            </div>
           </div>
 
           <div class="col-md-6 text-center">
-            <h1 class="display-5">Balanço por mes</h1>
-            <hr>
-            <canvas id="myChartMes" width="400" height="400"></canvas>
+            <div class="box-grafico">
+              <h4 class="display-5">Balanço por mes</h4>
+              <canvas id="myChartMes" width="400" height="400"></canvas>
+            </div>
+            
           </div>
         </div>
         
       </div>
     </section>
 
-    <!-- Script -->
+    <!--Início  footer-->
+    <footer class="rodape" >
+      <div class="container">
+        <div class="row">
+          <div class="namedev col-md-10">
+            By Micael Andrade
+          </div>
+          <div class="col-md-2">
+            <div class="redes-sociais">
+              <a title="Twitter" href=""><i class="fab fa-twitter"></i></a>
+              <a title="Github" href=""><i class="fab fa-github"></i></a>
+              <a title="Instagram" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Fim  footer-->
+    
+    <!--Inicio Meus Locais -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/chart.js"></script>
+    <!-- Fim Meus Locais -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>	
 
 </html>
